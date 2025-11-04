@@ -3,7 +3,7 @@
 pkg install git
 ```
 ```
-git clone https://github.com/bangpateng/push-dc
+git clone https://github.com/viewvideo02-creator/arif
 ```
 ```
 pkg install python
@@ -23,4 +23,4 @@ cd push-dc
 ```
 python main.py
 ```
-Created : bgpateng
+Created : Arifudin
