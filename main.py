@@ -11,7 +11,6 @@ time.sleep(1)
 
 import json
 
-# baca config otomatis
 with open("config.json", "r") as f:
     config = json.load(f)
 
@@ -19,7 +18,6 @@ channel_id = config["channel_id"]
 waktu1 = config["delay_delete"]
 waktu2 = config["delay_send"]
 
-# tampilkan info rapi
 print("[INFO] Setting Bot:")
 print(f"  Channel ID   : {channel_id}")
 print(f"  Hapus tiap   : {waktu1} detik")
