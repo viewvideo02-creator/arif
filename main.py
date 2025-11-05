@@ -19,8 +19,11 @@ waktu1 = config["delay_delete"]
 waktu2 = config["delay_send"]
 
 print("[INFO] Setting Bot:")
+time.sleep(1)
 print(f"  Channel ID   : {channel_id}")
+time.sleep(1)
 print(f"  Hapus tiap   : {waktu1} detik")
+time.sleep(1)
 print(f"  Kirim tiap   : {waktu2} detik")
 
 time.sleep(1)
