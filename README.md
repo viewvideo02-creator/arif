@@ -1,4 +1,4 @@
-# push-level-discord Intsal di Termux Android
+# push-level-discord Install di Termux Android
 ```
 pkg install git
 ```
