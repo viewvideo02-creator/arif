@@ -1,4 +1,4 @@
-# push-level-discord Install di Termux Android
+# push-level-discord Install ditermux khusus mobile
 ```
 pkg install git
 ```
