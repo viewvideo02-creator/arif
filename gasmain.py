@@ -52,12 +52,10 @@ while True:
         'Authorization': authorization
     }
 
-    # Kirim pesan
     r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", data=payload, headers=headers)
     print(Fore.WHITE + "Sent message: ")
     print(Fore.YELLOW + payload['content'])
 
-    # Simpan ID pesan yang dikirim (biar pasti pesan kamu)
     if r.status_code == 200 or r.status_code == 201:
         message_id = r.json()["id"]
     else:
@@ -68,17 +66,14 @@ while True:
             i = 0
         continue
 
-    # Tunggu sesuai delay delete
     time.sleep(waktu1)
 
-    # Coba hapus pesan sendiri
     delete = requests.delete(f"https://discord.com/api/v9/channels/{channel_id}/messages/{message_id}", headers=headers)
     if delete.status_code == 204:
         print(Fore.GREEN + f'Pesan dengan ID {message_id} berhasil dihapus')
     else:
         print(Fore.RED + f'Gagal menghapus pesan dengan ID {message_id}: {delete.status_code}')
 
-    # Lanjut ke pesan berikutnya
     i += 1
     if i >= len(words):
         i = 0
